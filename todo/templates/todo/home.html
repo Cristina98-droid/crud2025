@@ -1,0 +1,29 @@
+{% extends 'todo/layout.html' %}
+
+{% block content %}
+        </ul>
+        
+
+   
+        <table class="table">
+            {% for tarea in tareas %}
+
+            <tbody>
+              <tr>
+
+                <td>{{ tarea }}</td>
+                <td> <button><a href="{% url 'eliminar' tarea.id %}">Eliminar</a></button></td>
+                <td> <button><a href="{% url 'editar' tarea.id %}">Editar</a></button></td>
+              </tr>
+         
+
+
+            </tbody>
+            {% endfor %}
+          </table>
+
+
+
+        </ul>
+
+{% endblock %} 
